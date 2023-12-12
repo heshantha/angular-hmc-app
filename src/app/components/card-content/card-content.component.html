@@ -1,0 +1,77 @@
+<div class="wrapper container">
+ <div class="row">
+    <div class="col-md-4 col-sm-12">
+        <div class="card text-center">
+            <div class="card-body card-body-mobile">
+                <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsedone">
+              <h5 class="card-title">143</h5>
+              <p class="card-text">No of forms <br/> completed.</p>
+              <p class="card-value"><img [src]="imagePath" alt="Dynamic Image"> 2%</p>
+            </div>
+            
+        <button
+		type="button"
+		class="btn btn-outline-primary ms-2"
+		(click)="isCollapsedone = !isCollapsedone"
+		[attr.aria-expanded]="!isCollapsedone"
+		aria-controls="collapseExample"
+	>
+		compared with 25th to 31st july
+	</button>
+            </div>
+
+          </div>
+      </div>
+      <div class="col-md-4 col-sm-12">
+        <div class="card text-center">
+          <div class="card-body card-body-mobile">
+                <div #collapse="ngbCollapse" [(ngbCollapse)]="isCollapsedtwo">
+              <h5 class="card-title">23 min</h5>
+              <p class="card-text">Average trancription time <br/> per form  .</p>
+              <p class="card-value"><img [src]="imagePath" alt="Dynamic Image"> 2%</p>
+            </div>
+            <button
+            type="button"
+            class="btn btn-outline-primary ms-2"
+            (click)="isCollapsedtwo = !isCollapsedtwo"
+            [attr.aria-expanded]="!isCollapsedtwo"
+            aria-controls="collapseExample"
+        >
+            compared with 25th to 31st july
+        </button>
+            </div>
+          </div>
+      </div>
+      <div class="col-md-4 col-sm-12">
+        <div class="card text-center table-card-container">
+          <div class="card-body card-body-mobile">
+        <h3 class="h4-title text-center">Top 5 Templates Used</h3>
+        <div class="table-responsive">
+        <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Template Name</th>
+                <th scope="col">Usage</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Otto</td>
+                <td>mdo</td>
+              </tr>
+              <tr>
+                <td>Thornton</td>
+                <td>fat</td>
+              </tr>
+              <tr>
+                <td>the Bird</td>
+                <td>twitter</td>
+              </tr>
+            </tbody>
+          </table>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,91 @@
+@import "../../styles//variable.scss";
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  .card {
+    background-color: $green;
+    border-color: $borderblue;
+    height: 416px;
+    border-radius: 20px;
+
+    .card-body {
+      .card-title {
+        color: $blue;
+        font-weight: bold;
+      }
+      .card-text {
+        color: $grey;
+        font-weight: light;
+      }
+      .card-value {
+        font-size: $large;
+        color: $blue;
+        font-weight: 600;
+      }
+      .btn {
+        font-size: $XXsmall;
+        background-color: $buttongreen;
+        color: $borderblue;
+        font-style: italic;
+        border-radius: 30px;
+        border: none;
+      }
+      .h4-title {
+        color: $blue;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+      table {
+        tr {
+          th {
+            background-color: $green;
+            color: $blue;
+            font-weight: 700;
+            font-size: $small;
+            border-color: $grey;
+          }
+          td {
+            background-color: $green;
+            color: $grey;
+            font-size: $small;
+            border-color: $grey;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 768px) {
+  .card {
+    height: 416px;
+    &.table-card-container {
+      padding: 0px 40px 50px 40px;
+    }
+    .card-body {
+      padding: 90px 0 50px 0;
+        .card-title {
+          font-size: $XXlarge;
+        }
+        .card-text {
+          font-size: $medium;
+        }
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .card {
+    .card-body {
+      &.card-body-mobile {
+        padding: 30px 10px;
+        .card-title {
+          font-size: $Xlarge;
+        }
+        .card-text {
+          font-size: $small;
+        }
+      }
+    }
+  }
+}

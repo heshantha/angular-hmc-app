@@ -1,0 +1,29 @@
+@import '../../styles//variable.scss';
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    &.wrapper {
+        margin-bottom: 20px;
+    }
+    .col-form-label {
+        width: 125px;
+        color: $blue;
+        font-size:$small ;
+    }
+    .form-select {
+        background-color: $green;
+        border-color: $borderblue;
+        color: $blue;
+        font-size:$small ;
+    }
+    .small-text {
+        font-size: $XXsmall;
+        color: $black;
+        margin-top: 5px;
+        span {
+            padding-right: 5px;
+        }
+    }
+}

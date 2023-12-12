@@ -1,0 +1,50 @@
+@import '../styles//variable.scss';
+
+.top-header-wrapper {
+    margin-left: 180px;
+
+    .navbar-collapse  {
+        background-color: $green;
+        border: 1px solid $borderblue;
+        color: $blue;
+        font-size:$small ;
+        border-radius: 8px;
+        padding: 0 40px 0 20px;
+        ul {
+            margin-left: 0 !important;
+        }
+    }
+    .dropdown-menu {
+        background-color: $green;
+        color: $blue;
+        font-size:$small ;
+    }
+    .navbar-right-icon {
+    position: absolute;
+    right: 20px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .header-drop-down-continer {
+        width: 300px ;
+    }
+
+}
+@media only screen and (max-width: 768px) {
+    .header-drop-down-continer {
+        position: relative;
+        margin-top: 10px;
+        .navbar-right-icon {
+            right: 16px;
+            top: 9px;
+            }
+            .dropdown-menu {
+                border: none;
+                a {
+                    border-bottom: 1px solid $grey;
+                }
+            }
+    }
+
+}
+

@@ -1,4 +1,4 @@
-name: CI /CD Deployment
+name: CI/CD Deployment
 
 on:
   push:
@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name:  Get latest code
+      - name: Get latest code
         uses: actions/checkout@v3
         with:
           fetch-depth: 2
@@ -34,15 +34,14 @@ jobs:
         run: |
           npm install
           git reset --hard
+
       - name: Install Angular CLI
         run: npm install -g @angular/cli
+
       - name: Verify Angular CLI Installation
-        run: ng --version
+        run: ./node_modules/.bin/ng --version
         env:
           CI: false
 
-
       - name: List output files
         run: find build/ -print
-        
-     

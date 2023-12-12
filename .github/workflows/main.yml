@@ -1,0 +1,46 @@
+name: CI /CD Deployment
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  FTP-Deploy-Action:
+    name: Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name:  Get latest code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
+
+      - name: Use Node.js 16
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Cache npm dependencies
+        uses: actions/cache@v3
+        id: cache-node-modules
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+
+      - name: Install Dependencies
+        if: steps.npm-cache.outputs.cache-hit != 'true'
+        run: |
+          npm install
+          git reset --hard
+      - name: Build project
+        run: npm run build --if-present
+        env:
+          CI: false
+
+
+      - name: List output files
+        run: find build/ -print
+        
+     

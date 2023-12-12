@@ -34,8 +34,10 @@ jobs:
         run: |
           npm install
           git reset --hard
-      - name: Build project
-        run: ng build
+      - name: Install Angular CLI
+        run: npm install -g @angular/cli
+      - name: Verify Angular CLI Installation
+        run: ng --version
         env:
           CI: false
 

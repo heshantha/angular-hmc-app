@@ -17,6 +17,7 @@ export class AppBarChartComponent {
   constructor() {}
 
   ngOnInit() {
+    const isMobile = window.innerWidth <= 768;
     this.chart = new Chart('canvas', {
       type: 'bar',
       data: {
@@ -33,8 +34,8 @@ export class AppBarChartComponent {
         ],
       },
       options: {
-        responsive: true, // Ensure the chart is responsive
-        maintainAspectRatio: false, // Adjust the aspect ratio
+        responsive: true, 
+        maintainAspectRatio: !isMobile, 
         scales: {
             y: {
                 display: false,

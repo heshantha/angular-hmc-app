@@ -1,0 +1,19 @@
+@media only screen and (max-width: 768px) {
+    .card  {
+        .card-body {
+
+            &.card-body-mobile {
+                padding: 10px; 
+                .card-title {
+                    font-size: $Xlarge;
+                }
+                .card-text {
+                    font-size: $small;
+    
+                }
+            }
+ 
+   
+        }
+  }
+}

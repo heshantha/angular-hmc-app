@@ -42,4 +42,4 @@ jobs:
           CI: false
 
       - name: List output files
-        run: find build/ -print
+      

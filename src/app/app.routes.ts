@@ -7,6 +7,7 @@ import {SubscriptionsComponent} from '../app/subscriptions/subscriptions.compone
 import {SettingsComponent} from '../app/settings/settings.component';
 
 export const routes: Routes = [
+    { path: '', redirectTo: '/Reports', pathMatch: 'full' },
     { path: 'Clients', component: ClientsComponent },
     { path: 'Templates', component: TemplatesComponent },
     { path: 'Users', component: UsersComponent },

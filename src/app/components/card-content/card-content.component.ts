@@ -6,10 +6,10 @@ import { NgbCollapseModule } from '@ng-bootstrap/ng-bootstrap';
   standalone: true,
   imports: [NgbCollapseModule],
   templateUrl: './card-content.component.html',
-  styleUrl: './card-content.component.scss'
+  styleUrl: './card-content.component.scss',
 })
 export class CardContentComponent {
-	isCollapsedone = false;
+  isCollapsedone = false;
   isCollapsedtwo = false;
   imagePath = 'assets/images/graph.svg';
 }

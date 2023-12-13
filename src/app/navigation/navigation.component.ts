@@ -1,19 +1,35 @@
-import { Component, EventEmitter, Input, Output } from "@angular/core";
-import { RouterOutlet,RouterLink, RouterLinkActive } from '@angular/router'; 
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { RouterOutlet, RouterLink, RouterLinkActive } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import {ReportsComponent} from '../reports/reports.component'
-import {ClientsComponent} from '../clients/clients.component';
-import {TemplatesComponent} from '../templates/templates.component';
+import { ReportsComponent } from '../reports/reports.component';
+import { ClientsComponent } from '../clients/clients.component';
+import { TemplatesComponent } from '../templates/templates.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faUser ,faFile, faCircleUser ,faUsers, faChartSimple, faDollarSign,faCog} from '@fortawesome/free-solid-svg-icons';
-
+import {
+  faUser,
+  faFile,
+  faCircleUser,
+  faUsers,
+  faChartSimple,
+  faDollarSign,
+  faCog,
+} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navigation',
   standalone: true,
-  imports: [ ReportsComponent, CommonModule, RouterOutlet, RouterLink, RouterLinkActive,ClientsComponent,TemplatesComponent,FontAwesomeModule],
+  imports: [
+    ReportsComponent,
+    CommonModule,
+    RouterOutlet,
+    RouterLink,
+    RouterLinkActive,
+    ClientsComponent,
+    TemplatesComponent,
+    FontAwesomeModule,
+  ],
   templateUrl: './navigation.component.html',
-  styleUrl: './navigation.component.scss'
+  styleUrl: './navigation.component.scss',
 })
 export class NavigationComponent {
   @Input() isExpanded: boolean = false;

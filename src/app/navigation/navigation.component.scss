@@ -1,4 +1,4 @@
-@import '../styles//variable.scss';
+@import "../styles//variable.scss";
 .chevron::before {
   border-style: solid;
   border-width: 0.15em 0.15em 0 0;
@@ -7,7 +7,7 @@
   height: 0.8em;
   left: 0.15em;
   position: relative;
-  top: - 0.3em;
+  top: -0.3em;
   vertical-align: top;
   width: 0.8em;
 }
@@ -122,10 +122,10 @@
           background: transparent;
           .title {
             color: white;
-             span {
+            span {
               border-bottom: 1px solid $white;
               white-space: nowrap;
-             }
+            }
             &::before {
               background-color: #ffffff;
               height: 1px;

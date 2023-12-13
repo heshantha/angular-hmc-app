@@ -1,69 +1,58 @@
+<div class="top-header-wrapper">
+  <div class="top-header-container">
+    <nav class="navbar navbar-expand-md">
+      <div class="container-fluid justify-content-end">
+        <button
+          class="navbar-toggler"
+          type="button"
+          aria-controls="navbarContent"
+          [attr.aria-expanded]="!collapsed"
+          aria-label="Toggle navigation"
+          (click)="collapsed = !collapsed"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div class="top-header-wrapper">
-      <div class="top-header-container">
-        <nav class="navbar navbar-expand-md">
-          <div class="container-fluid justify-content-end">
-            <button
-              class="navbar-toggler"
-              type="button"
-              aria-controls="navbarContent"
-              [attr.aria-expanded]="!collapsed"
-              aria-label="Toggle navigation"
-              (click)="collapsed = !collapsed"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="header-drop-down-continer">
-            <div
-              class="navbar-collapse"
-              [class.collapse]="collapsed"
-              id="navbarContent"
-            >
-              <ul class="navbar-nav ms-auto">
-                <li class="nav-item" ngbDropdown>
-                  <a
-                    class="nav-link"
-                    tabindex="0"
-                    ngbDropdownToggle
-                    id="navbarDropdown2"
-                    role="button"
+        <div class="header-drop-down-continer">
+          <div
+            class="navbar-collapse"
+            [class.collapse]="collapsed"
+            id="navbarContent"
+          >
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item" ngbDropdown>
+                <a
+                  class="nav-link"
+                  tabindex="0"
+                  ngbDropdownToggle
+                  id="navbarDropdown2"
+                  role="button"
+                >
+                  Hope medical center admin</a
+                >
+                <div
+                  ngbDropdownMenu
+                  aria-labelledby="navbarDropdown2"
+                  class="dropdown-menu dropdown-menu-end"
+                >
+                  <a ngbDropdownItem href="#" (click)="$event.preventDefault()"
+                    >Action</a
                   >
-                    Hope medical center admin</a
+                  <a ngbDropdownItem href="#" (click)="$event.preventDefault()"
+                    >Another action</a
                   >
-                  <div
-                    ngbDropdownMenu
-                    aria-labelledby="navbarDropdown2"
-                    class="dropdown-menu dropdown-menu-end"
+                  <a ngbDropdownItem href="#" (click)="$event.preventDefault()"
+                    >Something else here</a
                   >
-                    <a
-                      ngbDropdownItem
-                      href="#"
-                      (click)="$event.preventDefault()"
-                      >Action</a
-                    >
-                    <a
-                      ngbDropdownItem
-                      href="#"
-                      (click)="$event.preventDefault()"
-                      >Another action</a
-                    >
-                    <a
-                      ngbDropdownItem
-                      href="#"
-                      (click)="$event.preventDefault()"
-                      >Something else here</a
-                    >
-                  </div>
-                </li>
-              </ul>
-              <span class="navbar-right-icon">
-                <fa-icon [icon]="faUser"></fa-icon>
-              </span>
-            </div>
+                </div>
+              </li>
+            </ul>
+            <span class="navbar-right-icon">
+              <fa-icon [icon]="faUser"></fa-icon>
+            </span>
           </div>
         </div>
-        </nav>
       </div>
-    </div>
-
+    </nav>
+  </div>
+</div>
